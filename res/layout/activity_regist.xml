@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.meshine.mecamera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <com.meshine.mecamera.view.Topbar
+        android:id="@+id/reg_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:leftText="返回"
+        custom:leftTextColor="#FFFFFF"
+        custom:leftTextSize="@dimen/topbar_left_text_size"
+        custom:rightTextColor="#FFFFFF"
+        custom:title="注册"
+        custom:titleTextColor="@color/topbar_title_text_color"
+        custom:titleTextSize="@dimen/topbar_title_text_size" >
+    </com.meshine.mecamera.view.Topbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/reg_topbar"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/reg_username"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginTop="15.0dip"
+            android:background="@drawable/normal_edit_shape"
+            android:drawableLeft="@drawable/ic_user_small"
+            android:drawablePadding="15.0dip"
+            android:ems="10"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:paddingBottom="2.0dip"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="15.0dip"
+            android:paddingTop="2.0dip"
+            android:singleLine="true"
+            android:textColorHint="#ff999999"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/reg_userpassword"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginBottom="20.0dip"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginTop="20.0dip"
+            android:background="@drawable/normal_edit_shape"
+            android:drawableLeft="@drawable/ic_password_small"
+            android:drawablePadding="15.0dip"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingBottom="2.0dip"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="15.0dip"
+            android:paddingTop="2.0dip"
+            android:singleLine="true"
+            android:textColorHint="#ff999999"
+            android:textSize="16.0sp" />
+
+        <CheckBox
+            android:id="@+id/reg_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="同意注册协议" 
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/reg_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:background="@drawable/normal_button_round"
+            android:singleLine="true"
+            android:text="确认注册"
+            android:textColor="#050505"
+            android:textSize="18.0sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/reg_progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+         android:visibility="gone"/>
+	
+</RelativeLayout>

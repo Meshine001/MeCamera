@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.meshine.mecamera"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:padding="10dp" >
+
+
+        <TextView
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="MeCamera"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/log_username"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/RelativeLayout2"
+        android:layout_marginLeft="12.0dp"
+        android:layout_marginRight="12.0dp"
+        android:layout_marginTop="15.0dp"
+        android:background="@drawable/normal_edit_shape"
+        android:drawableLeft="@drawable/ic_user_small"
+        android:drawablePadding="15.0dp"
+        android:ems="10"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:paddingBottom="2.0dp"
+        android:paddingLeft="15.0dp"
+        android:paddingRight="15.0dp"
+        android:paddingTop="2.0dp"
+        android:singleLine="true"
+        android:textColorHint="#ff999999"
+        android:textSize="16.0sp" />
+
+    <EditText
+        android:id="@+id/log_password"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/log_username"
+        android:layout_marginBottom="20.0dp"
+        android:layout_marginLeft="12.0dp"
+        android:layout_marginRight="12.0dp"
+        android:layout_marginTop="20.0dp"
+        android:background="@drawable/normal_edit_shape"
+        android:drawableLeft="@drawable/ic_password_small"
+        android:drawablePadding="15.0dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingBottom="2.0dp"
+        android:paddingLeft="15.0dp"
+        android:paddingRight="15.0dp"
+        android:paddingTop="2.0dp"
+        android:singleLine="true"
+        android:textColorHint="#ff999999"
+        android:textSize="16.0sp" />
+
+    <Button
+        android:id="@+id/log_login"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/log_password"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/normal_button_round"
+        android:singleLine="true"
+        android:text="@string/login"
+        android:textColor="#050505"
+        android:textSize="@dimen/normal_button_text_size" />
+
+    <TextView
+        android:id="@+id/log_regist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/log_login"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/regist_user"
+        android:textColor="#030303" />
+
+    <TextView
+        android:id="@+id/log_forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/log_login"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/forget_password"
+        android:textColor="#030303" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="@string/app_version"
+        android:textColor="@color/dimgray" />
+
+    <ProgressBar
+        android:id="@+id/face_progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

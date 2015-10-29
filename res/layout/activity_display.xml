@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.meshine.mecamera"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.meshine.mecamera.view.Topbar
+        android:id="@+id/disp_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:leftText="返回"
+        custom:leftTextColor="#FFFFFF"
+        custom:leftTextSize="@dimen/topbar_left_text_size"
+        custom:rightTextColor="#FFFFFF"
+        custom:title="图片预览"
+        custom:titleTextColor="@color/topbar_title_text_color"
+        custom:titleTextSize="@dimen/topbar_title_text_size" >
+    </com.meshine.mecamera.view.Topbar>
+
+    <ImageButton
+        android:id="@+id/disp_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_camera_capture_click" />
+
+    <ImageView
+        android:id="@+id/disp_pictrue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/disp_send"
+        android:layout_below="@+id/disp_topbar"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/disp_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Result"
+        android:textSize="50sp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/disp_progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="76dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/disp_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="照片不符合，请重新拍摄"
+        android:textColor="@color/red"
+        android:textStyle="bold" 
+        android:rotation="-45"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

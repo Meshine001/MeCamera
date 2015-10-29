@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.meshine.mecamera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <com.meshine.mecamera.view.Topbar
+        android:id="@+id/info_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:leftText="返回"
+        custom:leftTextColor="#FFFFFF"
+        custom:leftTextSize="@dimen/topbar_left_text_size"
+        custom:rightTextColor="#FFFFFF"
+        custom:title="个人信息"
+        custom:titleTextColor="@color/topbar_title_text_color"
+        custom:titleTextSize="@dimen/topbar_title_text_size" >
+    </com.meshine.mecamera.view.Topbar>
+    <EditText
+        android:id="@+id/info_item"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/info_topbar"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/normal_edit_shape"
+        android:drawablePadding="15dp"
+        android:ems="50"
+        android:hint="请输入昵称"
+        android:paddingBottom="2dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="2dp"
+        android:singleLine="true"
+        android:textColorHint="#ff999999"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/info_submit"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/info_item"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/normal_button_round"
+        android:singleLine="true"
+        android:text="确定"
+        android:textColor="#050505"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:custom="http://schemas.android.com/apk/res/com.meshine.mecamera"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.meshine.mecamera.CameraActivity" >
+
+    <SurfaceView
+        android:id="@+id/camera_surfacerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.meshine.mecamera.view.Topbar
+        android:id="@+id/camera_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        custom:leftText=""
+        custom:leftTextColor="#FFFFFF"
+        custom:leftTextSize="@dimen/topbar_left_text_size"
+        custom:rightBackground="@drawable/ic_camera_top_bar_sw_camera_click"
+        custom:rightTextColor="#FFFFFF"
+        custom:title=""
+        custom:titleTextColor="@color/topbar_title_text_color"
+        custom:titleTextSize="@dimen/topbar_title_text_size" >
+    </com.meshine.mecamera.view.Topbar>
+
+        <RelativeLayout
+        android:id="@+id/camera_userbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingTop="10dp" >
+
+        <com.meshine.mecamera.view.CircleImageView
+            android:id="@+id/camera_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_default_user"
+            custom:border_color="@android:color/white"
+            custom:border_width="1dp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/camera_head"
+            android:orientation="vertical"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/camera_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NickName"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/camera_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="username" />
+        </LinearLayout>
+    </RelativeLayout>
+    
+     <ImageView
+        android:id="@+id/camera_pre_head"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_below="@id/camera_topbar"
+        android:alpha="0.5"
+        android:scaleType="fitXY"
+        />
+    <ImageView
+        android:id="@+id/camera_capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_camera_capture_click"
+         android:visibility="gone"/>
+
+    <Switch
+        android:id="@+id/camera_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp" 
+        android:textOn="自动"
+        android:textOff="手动"
+        android:thumb="@drawable/normal_button_round"
+        />
+
+    <TextView
+        android:id="@+id/camera_auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/camera_switch"
+        android:layout_alignParentRight="true"
+        android:text="模式选择"
+        android:textColor="@color/white" 
+        />
+
+    <TextView
+        android:id="@+id/camera_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/camera_topbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="请保持在矩形框内"
+        android:textStyle="bold"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

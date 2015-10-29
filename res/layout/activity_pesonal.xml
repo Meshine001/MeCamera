@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.meshine.mecamera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d0d0d0" >
+
+    <com.meshine.mecamera.view.Topbar
+        android:id="@+id/per_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        custom:leftText="返回"
+        custom:leftTextColor="#FFFFFF"
+        custom:leftTextSize="@dimen/topbar_left_text_size"
+        custom:rightTextColor="#FFFFFF"
+        custom:title="个人信息"
+        custom:titleTextColor="@color/topbar_title_text_color"
+        custom:titleTextSize="@dimen/topbar_title_text_size" >
+    </com.meshine.mecamera.view.Topbar>
+
+    <RelativeLayout
+        android:id="@+id/per_headLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/per_topbar"
+        android:background="@android:color/black"
+        android:padding="10dp" >
+        <com.meshine.mecamera.view.CircleImageView
+            android:id="@+id/per_head"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_default_user"
+            custom:border_color="@android:color/white"
+            custom:border_width="1dp" />
+    </RelativeLayout>
+ 	<com.meshine.mecamera.view.CornerListView
+          android:id="@+id/per_infolist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/per_headLayout"
+        android:layout_margin="10dp"
+        android:background="@drawable/list_corner_round_bg"
+        android:cacheColorHint="#00000000"
+        android:divider="#000000"
+        android:dividerHeight="0.5px"
+        android:fadingEdge="none" />
+
+    <com.meshine.mecamera.view.CornerListView
+       android:id="@+id/per_syslist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/per_infolist"
+        android:layout_margin="10dp"
+        android:background="@drawable/list_corner_round_bg"
+        android:cacheColorHint="#00000000"
+        android:divider="#000000"
+        android:dividerHeight="0.5px"
+        android:fadingEdge="none" />
+   
+
+   <Button
+        android:id="@+id/per_logout"
+        android:layout_width="fill_parent"
+        android:layout_height="38dp"
+        android:layout_below="@id/per_syslist"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/normal_button_round"
+        android:singleLine="true"
+        android:text="安全退出"
+        android:textColor="#050505"
+        android:textSize="15sp" />
+  
+</RelativeLayout>
