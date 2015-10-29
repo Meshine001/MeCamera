@@ -73,6 +73,7 @@
         android:scaleType="fitXY"
         />
     <ImageView
+        
         android:id="@+id/camera_capture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
